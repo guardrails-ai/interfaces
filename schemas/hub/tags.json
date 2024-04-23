@@ -1,0 +1,137 @@
+{
+  "$id": "https://github.com/guardrails-ai/interfaces/schemas/hub/tags.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "language": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "en",
+              "all"
+            ]
+          }
+        ]
+      }
+    },
+    "certification": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "Guardrails Certified"
+            ]
+          }
+        ]
+      }
+    },
+    "contentType": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "string",
+              "object",
+              "list",
+              "integer",
+              "float",
+              "sql",
+              "code",
+              "csv",
+              "python"
+            ]
+          }
+        ]
+      }
+    },
+    "infrastructureRequirements": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "ML",
+              "NA",
+              "LLM",
+              "rule"
+            ]
+          }
+        ]
+      }
+    },
+    "riskCategory": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "Etiquette",
+              "Brand risk",
+              "Formatting",
+              "Invalid Code",
+              "Jailbreaking",
+              "Factuality",
+              "Code Exploits",
+              "Data Leakage"
+            ]
+          }
+        ]
+      }
+    },
+    "useCases": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "Chatbots",
+              "Customer Support",
+              "Structured data",
+              "RAG",
+              "Structured Data",
+              "Summarization",
+              "CodeGen",
+              "Text2SQL"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "language",
+    "certification",
+    "contentType",
+    "infrastructureRequirements",
+    "riskCategory",
+    "useCases"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$id": "https://github.com/guardrails-ai/interfaces/schemas/hub/repository.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "format": "url",
+      "description": "Url for the git repository."
+    },
+    "branch": {
+      "type": "string",
+      "description": "Reference for the live version: branch name, commit sha, or tag name"
+    }
+  },
+  "required": [
+    "url"
+  ]
+}

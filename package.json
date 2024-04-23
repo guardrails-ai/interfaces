@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "@hyperjump/json-schema-bundle": "^0.4.0",
+    "js-yaml": "^4.1.0",
+    "openapi-typescript": "^6.7.5",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "npm run build-json-schema && npm run js-build && npm run py-build",
+    "clean": "rm -rf ./js && rm -rf ./guardrails-interfaces",
+    "build-json-meta-schema": "node ./interfaces/json-schema-bundler.js https://json-schema.org/draft/2020-12/schema json-schema.json, shared",
+    "build-hub-hyper-schema": "node ./interfaces/json-schema-bundler.js https://github.com/guardrails-ai/guardrails-api-client/interfaces/hub/manifest.json index.json, hub",
+    "js-build": "echo \"FIX ME!!!\" && openapi-typescript interfaces/index.yml --output js/",
+    "py-build": "echo \"FIX ME!!!\" && source ./.venv/bin/activate && openapi-python-client generate --config ./interfaces-config.json --path ./interfaces/index.yml --meta setup;"
+  }
+}

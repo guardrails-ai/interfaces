@@ -1,0 +1,83 @@
+{
+  "$id": "https://github.com/guardrails-ai/interfaces/schemas/hub/manifest.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The namespaced identifier with which the validator registers.",
+      "format": "snake_case"
+    },
+    "name": {
+      "type": "string",
+      "description": "The Title Cased human-readable name for the validator.",
+      "format": "Title Case"
+    },
+    "description": {
+      "type": "string",
+      "description": "A description that concisely states the expected behaviour of the validator.",
+      "format": "Sentence case."
+    },
+    "author": {
+      "description": "The primary contact for the validator's git repository.",
+      "$ref": "/hub/contributor"
+    },
+    "maintainers": {
+      "description": "A list of all contacs for the validator's git repository.",
+      "type": "array",
+      "items": {
+        "$ref": "/hub/contributor"
+      }
+    },
+    "repository": {
+      "description": "The git repository that contains the source code for this validator.",
+      "$ref": "/hub/repository"
+    },
+    "namespace": {
+      "type": "string",
+      "description": "The organizational namespace for this validator; the prefix of the id."
+    },
+    "packageName": {
+      "type": "string",
+      "description": "The python package name for this validator; typically the same as the repository name and the suffix of the id.",
+      "format": "snake_case"
+    },
+    "moduleName": {
+      "type": "string",
+      "description": "The python module name for this validator; typically \"validator\"",
+      "format": "snake_case"
+    },
+    "postInstall": {
+      "type": "string",
+      "description": "The file path, relative to the module directory, to the post-install script for this validator.",
+      "default": "post-install.py"
+    },
+    "index": {
+      "type": "string",
+      "description": "The file path, relative to the module directory, to the index file for this validator.",
+      "default": "__init__.py"
+    },
+    "exports": {
+      "type": "array",
+      "items": "string",
+      "description": "The exports from the validator module; typically at least the validator's class name."
+    },
+    "tags": {
+      "$ref": "/hub/tags"
+    },
+    "requiresAuth": {
+      "type": "boolean",
+      "description": "Indicates whether the user must be authenticated to install this validator."
+    },
+    "featured": {
+      "type": "boolean",
+      "description": "Indicates whether this validator is currently featured."
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "$ref": "/shared/json-schema.json"
+      }
+    }
+  }
+}
