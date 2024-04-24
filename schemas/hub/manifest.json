@@ -20,18 +20,18 @@
     },
     "author": {
       "description": "The primary contact for the validator's git repository.",
-      "$ref": "/hub/contributor"
+      "$ref": "https://github.com/guardrails-ai/interfaces/schemas/hub/contributor.json"
     },
     "maintainers": {
       "description": "A list of all contacs for the validator's git repository.",
       "type": "array",
       "items": {
-        "$ref": "/hub/contributor"
+        "$ref": "https://github.com/guardrails-ai/interfaces/schemas/hub/contributor.json"
       }
     },
     "repository": {
       "description": "The git repository that contains the source code for this validator.",
-      "$ref": "/hub/repository"
+      "$ref": "https://github.com/guardrails-ai/interfaces/schemas/hub/repository.json"
     },
     "namespace": {
       "type": "string",
@@ -47,6 +47,19 @@
       "description": "The python module name for this validator; typically \"validator\"",
       "format": "snake_case"
     },
+    "exports": {
+      "type": "array",
+      "items": "string",
+      "description": "The exports from the validator module; typically at least the validator's class name."
+    },
+    "tags": {
+      "$ref": "https://github.com/guardrails-ai/interfaces/schemas/hub/tags.json"
+    },
+    "requiresAuth": {
+      "type": "boolean",
+      "description": "Indicates whether the user must be authenticated to install this validator.",
+      "default": true
+    },
     "postInstall": {
       "type": "string",
       "description": "The file path, relative to the module directory, to the post-install script for this validator.",
@@ -57,27 +70,44 @@
       "description": "The file path, relative to the module directory, to the index file for this validator.",
       "default": "__init__.py"
     },
-    "exports": {
-      "type": "array",
-      "items": "string",
-      "description": "The exports from the validator module; typically at least the validator's class name."
-    },
-    "tags": {
-      "$ref": "/hub/tags"
-    },
-    "requiresAuth": {
-      "type": "boolean",
-      "description": "Indicates whether the user must be authenticated to install this validator."
-    },
     "featured": {
       "type": "boolean",
-      "description": "Indicates whether this validator is currently featured."
+      "description": "Indicates whether this validator is currently featured.",
+      "default": false
+    },
+    "playgroundEnabled": {
+      "type": "boolean",
+      "description": "Indicates whether this validator is can be used in the Guardrails Hub Playground.",
+      "default": false
     },
     "parameters": {
       "type": "array",
       "items": {
-        "$ref": "/shared/json-schema.json"
+        "$ref": "https://github.com/guardrails-ai/interfaces/shared/json-schema.json"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": {}
+    },
+    "requiredModelAuth": {
+      "type": "array",
+      "items": {
+        "$ref": "https://github.com/guardrails-ai/interfaces/schemas/hub/model-auth.json"
       }
     }
-  }
+  },
+  "required": [
+    "id",
+    "name",
+    "description",
+    "author",
+    "maintainers",
+    "repository",
+    "namespace",
+    "packageName",
+    "moduleName",
+    "exports",
+    "tags"
+  ]
 }

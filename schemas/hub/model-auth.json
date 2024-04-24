@@ -1,0 +1,32 @@
+{
+  "$id": "https://github.com/guardrails-ai/interfaces/schemas/hub/model-auth.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "type": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "apiKey"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "type": "string",
+      "format": "camelCase"
+    },
+    "displayName": {
+      "type": "string",
+      "format": "Title Case"
+    }
+  },
+  "required": [
+    "type",
+    "name"
+  ]
+}
