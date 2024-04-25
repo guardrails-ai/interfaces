@@ -1,5 +1,4 @@
 {
-  "$id": "https://github.com/guardrails-ai/interfaces/shared/json-schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Core and Validation specifications meta-schema",
   "allOf": [
@@ -394,5 +393,6 @@
       },
       "$dynamicAnchor": "meta"
     }
-  }
+  },
+  "$id": "https://github.com/guardrails-ai/interfaces/shared/json-schema.json"
 }
