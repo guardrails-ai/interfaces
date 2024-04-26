@@ -1,6 +1,7 @@
 {
   "$id": "https://github.com/guardrails-ai/interfaces/schemas/hub/manifest.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Manifest",
   "type": "object",
   "properties": {
     "id": {
@@ -49,7 +50,9 @@
     },
     "exports": {
       "type": "array",
-      "items": "string",
+      "items": {
+        "type": "string"
+      },
       "description": "The exports from the validator module; typically at least the validator's class name."
     },
     "tags": {
@@ -77,13 +80,13 @@
     },
     "playgroundEnabled": {
       "type": "boolean",
-      "description": "Indicates whether this validator is can be used in the Guardrails Hub Playground.",
+      "description": "Indicates whether this validator can be used in the Guardrails Hub Playground.",
       "default": false
     },
     "parameters": {
       "type": "array",
       "items": {
-        "$ref": "https://github.com/guardrails-ai/interfaces/shared/json-schema.json"
+        "$ref": "https://github.com/guardrails-ai/interfaces/schemas/hub/parameter.json"
       }
     },
     "metadata": {
