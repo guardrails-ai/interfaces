@@ -1,0 +1,55 @@
+{
+  "$id": "https://github.com/guardrails-ai/interfaces/schemas/core/inputs.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Inputs",
+  "type": "object",
+  "properties": {
+    "llmApi": {
+      "type": "string",
+      "description": "The LLM resource targeted by the user.",
+      "examples": [
+        "openai.chat.completions.create",
+        "litellm.completion"
+      ]
+    },
+    "llmOutput": {
+      "type": "string",
+      "description": "The string output from an external LLM call provided by the user via Guard.parse."
+    },
+    "instructions": {
+      "type": "string",
+      "description": "The instructions for chat models."
+    },
+    "prompt": {
+      "type": "string",
+      "description": "The prompt for the LLM."
+    },
+    "msgHistory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": {}
+      },
+      "description": "The message history for chat models."
+    },
+    "promptParams": {
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Parameters to be formatted into the prompt."
+    },
+    "numReasks": {
+      "type": "int",
+      "description": "The total number of times the LLM can be called to correct output excluding the initial call."
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Additional data to be used by Validators during execution time."
+    },
+    "fullSchemaReask": {
+      "type": "boolean",
+      "description": "Whether to perform reasks for the entire schema rather than for individual fields."
+    }
+
+  }
+}

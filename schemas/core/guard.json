@@ -1,0 +1,95 @@
+{
+  "$id": "https://github.com/guardrails-ai/interfaces/schemas/core/guard.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Guard",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The unique identifier for the Guard.",
+      "format": "kebab-case"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name for the Guard."
+    },
+    "description": {
+      "type": "string",
+      "description": "A description that concisely states the expected behaviour or purpose of the Guard."
+    },
+    "validators": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ValidatorReference"
+      }
+    },
+    "schema": {
+      "$ref": "https://json-schema.org/draft/2020-12/schema"
+    },
+    "history": {
+      "type": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "$ref": {
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          },
+          {
+            "$ref": ""
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ],
+  "$defs": {
+    "ValidatorReference": {
+      "title": "ValidatorReference",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "https://github.com/guardrails-ai/interfaces/schemas/core/args-and-kwargs.json"
+        }
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The unique identifier for this Validator.  Often the hub id.",
+          "examples": ["@guardrails/regex_match"]
+        },
+        "on": {
+          "description": "A reference to the property this validator should be applied against.  Can be a valid JSON path or a meta-property such as \"prompt\" or \"output\"",
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "prompt",
+                "instructions",
+                "msg_history",
+                "output"
+              ],
+              "description": "meta-property"
+            },
+            {
+              "type": "string",
+              "description": "JSON path to property",
+              "examples": [
+                "$.foo.bar"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }    
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "$id": "https://github.com/guardrails-ai/interfaces/schemas/core/validator-log.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ValidatorLog",
+  "type": "object",
+  "properties": {
+    "validatorName": {
+      "type": "string",
+      "description": "The class name of the validator.",
+      "format": "PascalCase"
+    },
+    "registeredName": {
+      "type": "string",
+      "description": "The registry id of the validator.",
+      "format": "kebab-case"
+    },
+    "instanceId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "int"
+        }
+      ],
+      "description": "A unique identifier for the validator that produced this log within the session."
+    },
+    "propertyPath": {
+      "type": "string",
+      "description": "The JSON path to the property which was validated that produced this log."
+    },
+    "valueBeforeValidation": {
+      "$ref": "https://github.com/guardrails-ai/interfaces/schemas/core/any.json"
+    },
+    "valueAfterValidation": {
+      "$ref": "https://github.com/guardrails-ai/interfaces/schemas/core/any.json"
+    },
+    "validationResult": {
+      "$ref": "https://github.com/guardrails-ai/interfaces/schemas/core/validation-result.json"
+    },
+    "startTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "endTime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
