@@ -27,22 +27,20 @@
       "$ref": "https://json-schema.org/draft/2020-12/schema"
     },
     "history": {
-      "type": {
-        "anyOf": [
-          {
-            "type": "object",
-            "properties": {
-              "$ref": {
-                "type": "string",
-                "format": "uri"
-              }
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "$ref": {
+              "type": "string",
+              "format": "uri"
             }
-          },
-          {
-            "$ref": ""
           }
-        ]
-      }
+        },
+        {
+          "$ref": "https://github.com/guardrails-ai/interfaces/schemas/core/history.json"
+        }
+      ]
     }
   },
   "required": [
