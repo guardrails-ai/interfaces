@@ -86,7 +86,7 @@
     "parameters": {
       "type": "array",
       "items": {
-        "$ref": "https://github.com/guardrails-ai/interfaces/schemas/hub/parameter.json"
+        "$ref": "https://json-schema.org/draft/2020-12/schema"
       }
     },
     "metadata": {

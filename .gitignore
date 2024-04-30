@@ -1,10 +1,7 @@
 .venv
 node_modules
-schemas/index.json
-schemas/**/index.json
 ts
 py
 *openapi-spec.json
-guardrails-hub-types-client
 *hyper-bundle.json
-statham-bundle.json
+schemas/core

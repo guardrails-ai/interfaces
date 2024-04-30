@@ -7,122 +7,80 @@
     "language": {
       "type": "array",
       "items": {
-        "oneOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "string",
-            "enum": [
-              "en",
-              "all"
-            ]
-          }
+        "type": "string",
+        "enum": [
+          "en",
+          "all"
         ]
       }
     },
     "certification": {
       "type": "array",
       "items": {
-        "oneOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "string",
-            "enum": [
-              "Guardrails Certified"
-            ]
-          }
+        "type": "string",
+        "enum": [
+          "Guardrails Certified"
         ]
       }
     },
     "contentType": {
       "type": "array",
       "items": {
-        "oneOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "string",
-            "enum": [
-              "string",
-              "object",
-              "list",
-              "integer",
-              "float",
-              "sql",
-              "code",
-              "csv",
-              "python"
-            ]
-          }
+        "type": "string",
+        "enum": [
+          "string",
+          "object",
+          "list",
+          "integer",
+          "float",
+          "sql",
+          "code",
+          "csv",
+          "python"
         ]
       }
     },
     "infrastructureRequirements": {
       "type": "array",
       "items": {
-        "oneOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "string",
-            "enum": [
-              "ML",
-              "NA",
-              "LLM",
-              "rule"
-            ]
-          }
+        "type": "string",
+        "enum": [
+          "ML",
+          "NA",
+          "LLM",
+          "rule"
         ]
       }
     },
     "riskCategory": {
       "type": "array",
       "items": {
-        "oneOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "string",
-            "enum": [
-              "Etiquette",
-              "Brand risk",
-              "Formatting",
-              "Invalid Code",
-              "Jailbreaking",
-              "Factuality",
-              "Code Exploits",
-              "Data Leakage"
-            ]
-          }
+        "type": "string",
+        "enum": [
+          "Etiquette",
+          "Brand risk",
+          "Formatting",
+          "Invalid Code",
+          "Jailbreaking",
+          "Factuality",
+          "Code Exploits",
+          "Data Leakage"
         ]
       }
     },
     "useCases": {
       "type": "array",
       "items": {
-        "oneOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "string",
-            "enum": [
-              "Chatbots",
-              "Customer Support",
-              "Structured data",
-              "RAG",
-              "Structured Data",
-              "Summarization",
-              "CodeGen",
-              "Text2SQL"
-            ]
-          }
+        "type": "string",
+        "enum": [
+          "Chatbots",
+          "Customer Support",
+          "Structured data",
+          "RAG",
+          "Structured Data",
+          "Summarization",
+          "CodeGen",
+          "Text2SQL"
         ]
       }
     }

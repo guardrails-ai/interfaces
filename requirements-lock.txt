@@ -1,7 +1,0 @@
-json-ref-dict==0.7.2
-jsonpointer==2.4
-python-dateutil==2.9.0.post0
-PyYAML==6.0.1
-six==1.16.0
-statham-schema==0.15.1
-typing_extensions==4.11.0

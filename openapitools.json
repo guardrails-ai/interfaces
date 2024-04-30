@@ -1,0 +1,24 @@
+{
+  "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "7.5.0",
+    "generators": {
+      "ts": {
+        "generatorName": "typescript-node",
+        "output": "#{cwd}/ts/ts-client",
+        "inputSpec": "./hub-openapi-spec.json",
+        "additionalProperties": {
+          "supportsES6": true
+        },
+        "skipValidateSpec": true
+      },
+      "py": {
+        "generatorName": "python",
+        "output": "#{cwd}/py/py-client",
+        "inputSpec": "./hub-openapi-spec.json",
+        "skipValidateSpec": true
+      }
+    }
+  }
+}
