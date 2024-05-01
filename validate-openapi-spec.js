@@ -18,11 +18,11 @@ async function main () {
     ).toString()
   );
 
-  console.info(openApiSpec)
+  console.info("OpenAPI Spec: \n", JSON.stringify(openApiSpec, null, 2))
 
-  const output = await validate("https://spec.openapis.org/oas/3.1/schema-base", openApiSpec);
+  const output = await validate("https://spec.openapis.org/oas/3.1/schema-base", openApiSpec, "DETAILED");
 
-  console.info(output);
+  console.info("Validation Output: \n", JSON.stringify(output, null, 2));
   if (output.valid) {
     console.info("Ok")
     process.exit(0);
