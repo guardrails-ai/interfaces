@@ -14,7 +14,7 @@
     "py-build": "npm run bundle-hub-schema && npm run bundle-openapi-spec && npm run py-client-build",
     "bundle-hub-schema": "node ./scripts/bundler.js https://github.com/guardrails-ai/interfaces/schemas/hub/manifest.json schemas/hub hub",
     "bundle-openapi-spec": "node ./scripts/openapi-spec-bundler.js",
-    "ts-type-build": "json2ts -i schemas/hub/hyper-bundle.json -o ./ts/hub-types.ts --additionalProperties=false --cwd=schemas/hub --enableConstEnums=true",
+    "ts-type-build": "json2ts -i ./schemas/hub/manifest.json -o ./ts/hub-types.ts --additionalProperties=false --cwd=schemas/hub --enableConstEnums=true",
     "ts-client-build": "rm -rf ./ts/ts-client; mkdir -p ./ts/ts-client; openapi-generator-cli generate --generator-key ts",
     "py-client-build": "rm -rf ./py/py-client; mkdir -p ./py/py-client; openapi-generator-cli generate --generator-key py"
   },
