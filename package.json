@@ -2,24 +2,15 @@
   "type": "module",
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
-    "autorest": "^3.7.1",
-    "js-yaml": "^4.1.0",
+    "@hyperjump/json-schema": "^1.8.0",
+    "@openapitools/openapi-generator-cli": "^2.13.4",
     "json-schema-faker": "^0.5.6",
     "json-schema-to-typescript": "^14.0.0",
     "lodash": "^4.17.21",
     "typescript": "^5.4.5"
   },
   "scripts": {
-    "ts-build": "npm run bundle-hub-schema && npm run bundle-openapi-spec && npm run ts-type-build && npm run ts-client-build",
-    "py-build": "npm run bundle-hub-schema && npm run bundle-openapi-spec && npm run py-client-build",
-    "bundle-hub-schema": "node ./scripts/bundler.js https://github.com/guardrails-ai/interfaces/schemas/hub/manifest.json schemas/hub hub",
-    "bundle-openapi-spec": "node ./scripts/openapi-spec-bundler.js",
-    "ts-type-build": "json2ts -i ./schemas/hub/manifest.json -o ./ts/hub-types.ts --additionalProperties=false --cwd=schemas/hub --enableConstEnums=true",
-    "ts-client-build": "rm -rf ./ts/ts-client; mkdir -p ./ts/ts-client; openapi-generator-cli generate --generator-key ts",
-    "py-client-build": "rm -rf ./py/py-client; mkdir -p ./py/py-client; openapi-generator-cli generate --generator-key py"
-  },
-  "dependencies": {
-    "@hyperjump/json-schema": "^1.8.0",
-    "@openapitools/openapi-generator-cli": "^2.13.4"
+    "valiate-openapi-spec": "node ./resources/validate-openapi-spec.js",
+    "valiate-json-schema": "node ./resources/validate-json-schema.js"
   }
 }

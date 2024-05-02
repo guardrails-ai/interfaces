@@ -18,16 +18,15 @@ async function main () {
     ).toString()
   );
 
-  console.info("OpenAPI Spec: \n", JSON.stringify(openApiSpec, null, 2))
 
   const output = await validate("https://spec.openapis.org/oas/3.1/schema-base", openApiSpec, "DETAILED");
 
-  console.info("Validation Output: \n", JSON.stringify(output, null, 2));
   if (output.valid) {
-    console.info("Ok")
+    console.info(`OpenAPI Specification: ${filepath} - Ok`)
     process.exit(0);
   } else {
     console.error(`The schema located at ${filepath} is not compliant with OpenAPI Specification 3.1!`);
+    console.error("Validation Output: \n", JSON.stringify(output, null, 2));
     process.exit(1);
   }
 }

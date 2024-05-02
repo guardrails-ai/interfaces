@@ -17,15 +17,13 @@ async function main () {
     ).toString()
   );
 
-  console.info("JSON Schema: \n", JSON.stringify(schema, null, 2));
-
   const output = await validate("https://json-schema.org/draft/2020-12/schema", schema, "DETAILED");
-  console.info("Validation Output: \n", JSON.stringify(output, null, 2));
   if (output.valid) {
-    console.info("Ok")
+    console.info(`JSON Schema: ${filepath} - Ok`)
     process.exit(0);
   } else {
     console.error(`The schema located at ${filepath} is not compliant with JSON schema Draft 2020-12!`);
+    console.error("Validation Output: \n", JSON.stringify(output, null, 2));
     process.exit(1);
   }
 }
