@@ -85,21 +85,16 @@
     },
     "parameters": {
       "type": "object",
-      "additionalProperties": {
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "required": {
-                "type": "boolean",
-                "default": false
-              }
-            }
-          },
-          {
-            "$ref": "https://json-schema.org/draft/2020-12/schema"
+      "properties": {
+        "properties": {
+          "$ref": "https://json-schema.org/draft/2020-12/schema"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
           }
-        ]
+        }
       }
     },
     "metadata": {
