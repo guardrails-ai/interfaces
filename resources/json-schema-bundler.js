@@ -1,29 +1,6 @@
-import fs  from 'fs';
-import { join, resolve }  from 'path';
-import { registerSchema }  from '@hyperjump/json-schema/draft-2020-12';
 import { bundle }  from '@hyperjump/json-schema/bundle';
 import _ from 'lodash';
 
-
-async function* walk (dirName, ignoreList = []) {
-  const files = fs.readdirSync(dirName);
-  for (const file of files) {
-    const filepath = join(dirName, file);
-    // console.debug(`Evaluating filepath: ${filepath}`);
-    // console.debug(`ignoreList: ${ignoreList}`);
-    if (ignoreList.includes(filepath) || filepath.endsWith('index.json')) {
-      // console.debug(`Ignoring filepath: ${filepath}...`);
-      continue
-    };
-    const stats = fs.statSync(filepath);
-    if (stats.isDirectory()) {
-      yield* walk(filepath, ignoreList);
-    } else if (stats.isFile()) {
-      // console.debug("yielding schema from file ", filepath)
-      yield fs.readFileSync(resolve(filepath)).toString()
-    }
-  }
-}
 
 function useDefs (property) {
   if (property.$ref) {
@@ -126,20 +103,7 @@ function hoistDefs (schema) {
   };
 }
 
-async function bundleJsonSchemas (schemaId, srcDir, outputDir, outFile) {
-  const outputPath = outputDir != 'schemas' ? `schemas/${outputDir}` : outputDir;
-  const outputFile = `${outputPath}/${outFile}`;
-
-  const ignoreList = [outputFile];
-  // console.debug("ignoreList: ", ignoreList)
-  for await (const schema of walk(srcDir, ignoreList)) {
-    const schemaJson = JSON.parse(schema);
-    // console.debug('Schema: ', schemaJson.$id)
-    // console.debug(schemaJson)
-    // console.debug('\n')
-    registerSchema(schemaJson, schemaJson.$id);
-  }
-
+export async function bundleJsonSchema (schemaId) {
   let bundledSchema = await bundle(schemaId);
   bundledSchema.$id = schemaId;
 
@@ -147,30 +111,7 @@ async function bundleJsonSchemas (schemaId, srcDir, outputDir, outFile) {
   bundledSchema.$defs = updateDefs(bundledSchema);
   bundledSchema.properties = updateRefs(bundledSchema.properties);
   bundledSchema.$defs = updateRefs(bundledSchema.$defs);
-  
-  fs.writeFileSync(resolve(outputFile), JSON.stringify(bundledSchema, null, 2))
+  return bundledSchema;
 }
-
-async function createIndex () {
-  const [
-    _execPath,
-    _thisFile,
-    schemaId,
-    srcDir = 'schemas',
-    outputDir = 'schemas',
-    outFile = 'hyper-bundle.json'
-  ] = process.argv;
-
-  if (!schemaId) throw new Error("Schema ID is required as the first argument for this script!");
-  if (!srcDir) {
-    console.warn("It is highly suggested to pass source directory as the second argument for this script!  Otherwise all schemas will be included as $defs.");
-  }
-  if (!outputDir) {
-    console.warn("It is highly suggested to pass source directory as the second argument for this script!  Otherwise schemas/index.json will be overwritten.");
-  }
-
-  bundleJsonSchemas(schemaId, srcDir, outputDir, outFile)
-}
-createIndex()
 
 

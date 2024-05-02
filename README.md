@@ -35,3 +35,7 @@ ajv
 
 ##### Python
 json-schema
+
+## TODO
+ 
+ - [ ] Add a github action that uses resources/validate-json-schema.js to validate any schema changes on PR

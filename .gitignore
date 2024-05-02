@@ -1,7 +1,9 @@
 .venv
 node_modules
-ts
-py
 *openapi-spec.json
 *hyper-bundle.json
+dist
+build
+resources/hub/ts/src
+resources/hub/ts/dist
 schemas/core
