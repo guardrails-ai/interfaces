@@ -84,8 +84,8 @@
       "default": false
     },
     "parameters": {
-      "type": "array",
-      "items": {
+      "type": "object",
+      "additionalProperties": {
         "$ref": "https://json-schema.org/draft/2020-12/schema"
       }
     },
