@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/hub/manifest.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/hub-integration/schemas/hub/manifest.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Manifest",
   "type": "object",
@@ -21,18 +21,18 @@
     },
     "author": {
       "description": "The primary contact for the validator's git repository.",
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/hub/contributor.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/hub-integration/schemas/hub/contributor.json"
     },
     "maintainers": {
       "description": "A list of all contacs for the validator's git repository.",
       "type": "array",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/hub/contributor.json"
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/hub-integration/schemas/hub/contributor.json"
       }
     },
     "repository": {
       "description": "The git repository that contains the source code for this validator.",
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/hub/repository.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/hub-integration/schemas/hub/repository.json"
     },
     "namespace": {
       "type": "string",
@@ -56,7 +56,7 @@
       "description": "The exports from the validator module; typically at least the validator's class name."
     },
     "tags": {
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/hub/tags.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/hub-integration/schemas/hub/tags.json"
     },
     "requiresAuth": {
       "type": "boolean",
@@ -86,7 +86,21 @@
     "parameters": {
       "type": "object",
       "additionalProperties": {
-        "$ref": "https://json-schema.org/draft/2020-12/schema"
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {
+              "required": {
+                "type": "boolean",
+                "default": false
+              }
+            }
+          },
+          {
+            "$ref": "https://json-schema.org/draft/2020-12/schema"
+          }
+        ]
+      }
       }
     },
     "metadata": {
@@ -96,7 +110,7 @@
     "requiredModelAuth": {
       "type": "array",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/hub/model-auth.json"
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/hub-integration/schemas/hub/model-auth.json"
       }
     }
   },

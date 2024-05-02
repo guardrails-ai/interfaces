@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/hub/repository.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/hub-integration/schemas/hub/repository.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Repository",
   "type": "object",
