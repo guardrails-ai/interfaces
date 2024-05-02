@@ -1,0 +1,116 @@
+{
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/schemas/hub/manifest.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Manifest",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The namespaced identifier with which the validator registers.",
+      "format": "snake_case"
+    },
+    "name": {
+      "type": "string",
+      "description": "The Title Cased human-readable name for the validator.",
+      "format": "Title Case"
+    },
+    "description": {
+      "type": "string",
+      "description": "A description that concisely states the expected behaviour of the validator.",
+      "format": "Sentence case."
+    },
+    "author": {
+      "description": "The primary contact for the validator's git repository.",
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/schemas/hub/contributor.json"
+    },
+    "maintainers": {
+      "description": "A list of all contacs for the validator's git repository.",
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/schemas/hub/contributor.json"
+      }
+    },
+    "repository": {
+      "description": "The git repository that contains the source code for this validator.",
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/schemas/hub/repository.json"
+    },
+    "namespace": {
+      "type": "string",
+      "description": "The organizational namespace for this validator; the prefix of the id."
+    },
+    "packageName": {
+      "type": "string",
+      "description": "The python package name for this validator; typically the same as the repository name and the suffix of the id.",
+      "format": "snake_case"
+    },
+    "moduleName": {
+      "type": "string",
+      "description": "The python module name for this validator; typically \"validator\"",
+      "format": "snake_case"
+    },
+    "exports": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The exports from the validator module; typically at least the validator's class name."
+    },
+    "tags": {
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/schemas/hub/tags.json"
+    },
+    "requiresAuth": {
+      "type": "boolean",
+      "description": "Indicates whether the user must be authenticated to install this validator.",
+      "default": true
+    },
+    "postInstall": {
+      "type": "string",
+      "description": "The file path, relative to the module directory, to the post-install script for this validator.",
+      "default": "post-install.py"
+    },
+    "index": {
+      "type": "string",
+      "description": "The file path, relative to the module directory, to the index file for this validator.",
+      "default": "__init__.py"
+    },
+    "featured": {
+      "type": "boolean",
+      "description": "Indicates whether this validator is currently featured.",
+      "default": false
+    },
+    "playgroundEnabled": {
+      "type": "boolean",
+      "description": "Indicates whether this validator can be used in the Guardrails Hub Playground.",
+      "default": false
+    },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "https://json-schema.org/draft/2020-12/schema"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": {}
+    },
+    "requiredModelAuth": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/schemas/hub/model-auth.json"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "description",
+    "author",
+    "maintainers",
+    "repository",
+    "namespace",
+    "packageName",
+    "moduleName",
+    "exports",
+    "tags"
+  ]
+}

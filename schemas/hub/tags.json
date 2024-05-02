@@ -1,0 +1,96 @@
+{
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/schemas/hub/tags.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tags",
+  "type": "object",
+  "properties": {
+    "language": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "en",
+          "all"
+        ]
+      }
+    },
+    "certification": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Guardrails Certified"
+        ]
+      }
+    },
+    "contentType": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "string",
+          "object",
+          "list",
+          "integer",
+          "float",
+          "sql",
+          "code",
+          "csv",
+          "python"
+        ]
+      }
+    },
+    "infrastructureRequirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ML",
+          "NA",
+          "LLM",
+          "Rule"
+        ]
+      }
+    },
+    "riskCategory": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Etiquette",
+          "Brand risk",
+          "Formatting",
+          "Invalid Code",
+          "Jailbreaking",
+          "Factuality",
+          "Code Exploits",
+          "Data Leakage"
+        ]
+      }
+    },
+    "useCases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Chatbots",
+          "Customer Support",
+          "Structured data",
+          "RAG",
+          "Structured Data",
+          "Summarization",
+          "CodeGen",
+          "Text2SQL"
+        ]
+      }
+    }
+  },
+  "required": [
+    "language",
+    "certification",
+    "contentType",
+    "infrastructureRequirements",
+    "riskCategory",
+    "useCases"
+  ]
+}

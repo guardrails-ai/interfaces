@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@hyperjump/json-schema": "^1.8.0",
+    "@openapitools/openapi-generator-cli": "^2.13.4",
+    "json-schema-faker": "^0.5.6",
+    "json-schema-to-typescript": "^14.0.0",
+    "lodash": "^4.17.21",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "valiate-openapi-spec": "node ./resources/validate-openapi-spec.js",
+    "valiate-json-schema": "node ./resources/validate-json-schema.js"
+  }
+}
