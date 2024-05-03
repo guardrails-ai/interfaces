@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/hub-integration/schemas/hub/contributor.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/hub/contributor.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Contributor",
   "type": "object",
