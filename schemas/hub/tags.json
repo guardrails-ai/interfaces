@@ -84,13 +84,5 @@
         ]
       }
     }
-  },
-  "required": [
-    "language",
-    "certification",
-    "contentType",
-    "infrastructureRequirements",
-    "riskCategory",
-    "useCases"
-  ]
+  }
 }
