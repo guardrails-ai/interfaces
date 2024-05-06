@@ -80,10 +80,10 @@
       "description": "Information from the LLM response.",
       "properties": {
         "promptTokenCount": {
-          "type": "int"
+          "type": "integer"
         },
         "responseTokenCount": {
-          "type": "int"
+          "type": "integer"
         },
         "output": {
           "type": "string"

@@ -20,7 +20,7 @@
           "type": "string"
         },
         {
-          "type": "int"
+          "type": "integer"
         }
       ],
       "description": "A unique identifier for the validator that produced this log within the session."

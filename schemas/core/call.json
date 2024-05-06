@@ -16,22 +16,20 @@
       "default": {}
     },
     "exception": {
-      "type": {
-        "anyOf": [
-          {
-            "type": "string"
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
           },
-          {
-            "type": "object",
-            "properties": {
-              "message": {
-                "type": "string"
-              }
-            },
-            "additionalProperties": {}
-          }
-        ]
-      }
+          "additionalProperties": {}
+        }
+      ]
     }
   },
   "$defs": {

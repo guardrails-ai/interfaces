@@ -1,0 +1,44 @@
+name: Quality Checks
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Install Node Dependencies
+      run: |
+        npm ci;
+      continue-on-error: false
+
+    - name: Validate Schemas
+      run: |
+        find ./schemas -type d -print0 | while read -d $'\0' dir
+        do
+            for file in "$dir"/*; do
+                if [[ -f $file && $file == *.json ]]; then
+                    npm run validate-json-schema $file || exit 1
+                elif [[ -d $file ]]; then
+                    echo "$file is a directory. Skipping.."
+                    continue;
+                else
+                    echo "$file is not valid!"
+                    echo "./schemas must only contain valid JSON schemas as '.json' files!"
+                    exit 1
+                fi
+
+            done
+        done
+      continue-on-error: false

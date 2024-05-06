@@ -11,6 +11,6 @@
   },
   "scripts": {
     "valiate-openapi-spec": "node ./resources/validate-openapi-spec.js",
-    "valiate-json-schema": "node ./resources/validate-json-schema.js"
+    "validate-json-schema": "node ./resources/validate-json-schema.js"
   }
 }

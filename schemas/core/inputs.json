@@ -38,7 +38,7 @@
       "description": "Parameters to be formatted into the prompt."
     },
     "numReasks": {
-      "type": "int",
+      "type": "integer",
       "description": "The total number of times the LLM can be called to correct output excluding the initial call."
     },
     "metadata": {
