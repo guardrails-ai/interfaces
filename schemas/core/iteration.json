@@ -1,14 +1,14 @@
 {
-  "$id": "https://github.com/guardrails-ai/interfaces/schemas/core/iteration.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/iteration.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Iteration",
   "type": "object",
   "properties": {
     "inputs": {
-      "$ref": "https://github.com/guardrails-ai/interfaces/schemas/core/inputs.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/inputs.json"
     },
     "outputs": {
-      "$ref": "https://github.com/guardrails-ai/interfaces/schemas/core/outputs.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/outputs.json"
     }
   },
   "required": []

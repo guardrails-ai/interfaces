@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/guardrails-ai/interfaces/schemas/core/history.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/history.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "History",
   "type": "array",

@@ -1,11 +1,11 @@
 {
-  "$id": "https://github.com/guardrails-ai/interfaces/schemas/core/pass-result.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/pass-result.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "PassResult",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://github.com/guardrails-ai/interfaces/schemas/core/validation-result.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validation-result.json"
     }
   ],
   "properties": {
@@ -17,7 +17,7 @@
       "type": "string"
     },
     "fixValue": {
-      "$ref": "https://github.com/guardrails-ai/interfaces/schemas/core/any.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any.json"
     }
   }
 }
