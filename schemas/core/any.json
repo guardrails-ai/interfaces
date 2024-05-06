@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Any",
   "anyOf": [

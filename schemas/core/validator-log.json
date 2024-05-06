@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validator-log.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/validator-log.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ValidatorLog",
   "type": "object",
@@ -30,13 +30,13 @@
       "description": "The JSON path to the property which was validated that produced this log."
     },
     "valueBeforeValidation": {
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any.json"
     },
     "valueAfterValidation": {
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any.json"
     },
     "validationResult": {
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validation-result.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/validation-result.json"
     },
     "startTime": {
       "type": "string",

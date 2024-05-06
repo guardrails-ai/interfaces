@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/call.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/call.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Call",
   "type": "object",
@@ -7,7 +7,7 @@
     "iterations": {
       "type": "array",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/iteration.json"
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/iteration.json"
       },
       "default": []
     },
@@ -38,10 +38,10 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/inputs.json"
+          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/inputs.json"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/args-and-kwargs.json"
+          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/args-and-kwargs.json"
         }
       ]
     }
