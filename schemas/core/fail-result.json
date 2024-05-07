@@ -1,7 +1,7 @@
 {
   "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/fail-result.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "PassResult",
+  "title": "FailResult",
   "type": "object",
   "allOf": [
     {
