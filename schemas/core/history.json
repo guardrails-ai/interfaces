@@ -4,6 +4,6 @@
   "title": "History",
   "type": "array",
   "items": {
-    "$ref": "./call.json"
+    "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/call.json"
   }
 }
