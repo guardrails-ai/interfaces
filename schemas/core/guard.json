@@ -83,6 +83,19 @@
               ]
             }
           ]
+        },
+        "onFail": {
+          "type": "string",
+          "enum": [
+            "exception",
+            "filter",
+            "fix",
+            "fix_reask",
+            "noop",
+            "reask",
+            "refrain"
+          ],
+          "default": "noop"
         }
       },
       "required": [
