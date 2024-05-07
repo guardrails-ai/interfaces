@@ -30,10 +30,10 @@
       "description": "The JSON path to the property which was validated that produced this log."
     },
     "valueBeforeValidation": {
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any-type.json"
     },
     "valueAfterValidation": {
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any-type.json"
     },
     "validationResult": {
       "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/validation-result.json"

@@ -14,7 +14,7 @@
       "const": "pass"
     },
     "valueOverride": {
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any-type.json"
     }
   }
 }

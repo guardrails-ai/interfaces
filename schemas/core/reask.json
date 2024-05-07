@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "incorrectValue": {
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any-type.json"
     },
     "failResults": {
       "type": "array",
