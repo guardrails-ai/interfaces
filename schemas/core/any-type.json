@@ -2,7 +2,7 @@
   "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any-type.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "AnyType",
-  "anyOf": [
+  "oneOf": [
     {
       "$ref": "#/$defs/primitives"
     },
@@ -15,7 +15,7 @@
   ],
   "$defs": {
     "primitives": {
-      "anyOf": [
+      "oneOf": [
         {
           "type": "boolean"
         },
@@ -40,7 +40,7 @@
     "arrays": {
       "type": "array",
       "items": {
-        "anyOf": [
+        "oneOf": [
           {
             "$ref": "#/$defs/primitives"
           },

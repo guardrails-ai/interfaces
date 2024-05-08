@@ -11,7 +11,7 @@
     },
     "validatedOutput": {
       "description": "The validated, and potentially fixed, output from the LLM call after undergoing validation.",
-      "anyOf": [
+      "oneOf": [
         {
           "type": "string"
         },
