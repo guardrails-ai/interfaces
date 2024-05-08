@@ -10,7 +10,6 @@
   ],
   "properties": {
     "outcome": {
-      "type": "string",
       "const": "pass"
     },
     "valueOverride": {
