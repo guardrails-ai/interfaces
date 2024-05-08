@@ -6,11 +6,7 @@
   "properties": {
     "llmApi": {
       "type": "string",
-      "description": "The LLM resource targeted by the user.",
-      "examples": [
-        "openai.chat.completions.create",
-        "litellm.completion"
-      ]
+      "description": "The LLM resource targeted by the user. e.g. openai.chat.completions.create"
     },
     "llmOutput": {
       "type": "string",

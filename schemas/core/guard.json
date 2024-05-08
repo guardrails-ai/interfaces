@@ -59,8 +59,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "The unique identifier for this Validator.  Often the hub id.",
-          "examples": ["@guardrails/regex_match"]
+          "description": "The unique identifier for this Validator.  Often the hub id; e.g. guardrails/regex_match"
         },
         "on": {
           "description": "A reference to the property this validator should be applied against.  Can be a valid JSON path or a meta-property such as \"prompt\" or \"output\"",
@@ -77,10 +76,7 @@
             },
             {
               "type": "string",
-              "description": "JSON path to property",
-              "examples": [
-                "$.foo.bar"
-              ]
+              "description": "JSON path to property; e.g. $.foo.bar"
             }
           ]
         },
