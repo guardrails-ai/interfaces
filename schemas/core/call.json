@@ -16,7 +16,7 @@
       "default": {}
     },
     "exception": {
-      "oneOf": [
+      "anyOf": [
         {
           "type": "string"
         },

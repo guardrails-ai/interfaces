@@ -27,7 +27,7 @@
       "$ref": "https://json-schema.org/draft/2020-12/schema"
     },
     "history": {
-      "oneOf": [
+      "anyOf": [
         {
           "type": "object",
           "properties": {
@@ -64,7 +64,7 @@
         },
         "on": {
           "description": "A reference to the property this validator should be applied against.  Can be a valid JSON path or a meta-property such as \"prompt\" or \"output\"",
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
