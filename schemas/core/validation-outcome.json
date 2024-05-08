@@ -27,7 +27,7 @@
     },
     "validationPassed": {
       "description": "A boolean to indicate whether or not the LLM output passed validation.  If this is False, the validated_output may be invalid.",
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/reask.json"
+      "type": "boolean"
     },
     "error": {
       "type": "string",
