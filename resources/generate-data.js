@@ -1,8 +1,14 @@
 import fs  from 'fs';
+import '@hyperjump/json-schema/draft-2020-12';
+import contentTypeParser from 'content-type';
+import _ from 'lodash';
 import { resolve }  from 'path';
+import { addMediaTypePlugin } from '@hyperjump/browser';
+import { buildSchemaDocument } from '@hyperjump/json-schema/experimental';
 import { JSONSchemaFaker } from "json-schema-faker";
 import { faker } from '@faker-js/faker';
-import _ from 'lodash';
+import { bundleJsonSchema } from './json-schema-bundler.js'
+
 
 const {
   upperFirst,
@@ -12,9 +18,21 @@ const {
 } = _;
 
 
+addMediaTypePlugin('text/plain', {
+  parse: async (response) => {
+    const contentType = contentTypeParser.parse(response.headers.get('content-type') ?? '');
+    const contextDialectId = contentType.parameters.schema ?? contentType.parameters.profile;
+    
+    const responseBody = JSON.parse(await response.text());
+    return buildSchemaDocument(responseBody, response.url, contextDialectId);
+  }
+});
+
 async function generateData () {
-  const hubSchemaFile = fs.readFileSync(resolve('schemas/hub/hyper-bundle.json')).toString();
-  const hubSchema = JSON.parse(hubSchemaFile);
+
+  const manifestSchema = await bundleJsonSchema("https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/hub/manifest.json");
+  fs.mkdirSync('./build', { recursive: true });
+  fs.writeFileSync(resolve('./build/Manifest.json'), JSON.stringify(manifestSchema, null, 2))
 
   JSONSchemaFaker.format({
     'Sentence case.': () => upperFirst(faker.word.words(3)),
@@ -27,7 +45,7 @@ async function generateData () {
     'Title Case': () => startCase(faker.word.words(3))
   });
 
-  const sampleManifest = JSONSchemaFaker.generate(hubSchema);
+  const sampleManifest = JSONSchemaFaker.generate(manifestSchema);
 
   console.log(sampleManifest)
 }
