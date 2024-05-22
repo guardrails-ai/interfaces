@@ -1,9 +1,0 @@
-{
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/history.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "History",
-  "type": "array",
-  "items": {
-    "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/call.json"
-  }
-}
