@@ -29,11 +29,14 @@
     "history": {
       "anyOf": [
         {
-          "type": "object",
-          "properties": {
-            "$ref": {
-              "type": "string",
-              "format": "uri"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "$ref": {
+                "type": "string",
+                "format": "uri"
+              }
             }
           }
         },
@@ -101,6 +104,6 @@
       "required": [
         "id"
       ]
-    }    
+    }
   }
 }
