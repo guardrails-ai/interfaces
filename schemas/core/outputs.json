@@ -19,6 +19,12 @@
         {
           "type": "object",
           "additionalProperties": {}
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref":" https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any-type.json"
+          }
         }
       ]
     },
@@ -33,6 +39,12 @@
         {
           "type": "object",
           "additionalProperties": {}
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref":" https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any-type.json"
+          }
         }
       ]
     },
@@ -44,6 +56,12 @@
         {
           "type": "object",
           "additionalProperties": {}
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref":" https://raw.githubusercontent.com/guardrails-ai/interfaces/core-schemas/schemas/core/any-type.json"
+          }
         }
       ]
     },
