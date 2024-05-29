@@ -101,8 +101,18 @@
       }
     },
     "metadata": {
-      "type": "object",
-      "additionalProperties": {}
+      "properties": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "https://json-schema.org/draft/2020-12/schema"
+        }
+      },
+      "required": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
     },
     "requiredModelAuth": {
       "type": "array",
