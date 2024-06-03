@@ -96,7 +96,8 @@
             "fix_reask",
             "noop",
             "reask",
-            "refrain"
+            "refrain",
+            "custom"
           ],
           "default": "noop"
         }
