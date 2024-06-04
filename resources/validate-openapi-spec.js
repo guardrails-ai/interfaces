@@ -19,7 +19,7 @@ async function main () {
   );
 
 
-  const output = await validate("https://spec.openapis.org/oas/3.1/schema-base", openApiSpec, "DETAILED");
+  const output = await validate("https://spec.openapis.org/oas/3.1/schema-base", openApiSpec, "BASIC");
 
   if (output.valid) {
     console.info(`OpenAPI Specification: ${filepath} - Ok`)
