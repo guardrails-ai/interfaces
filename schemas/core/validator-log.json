@@ -1,0 +1,57 @@
+{
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validator-log.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ValidatorLog",
+  "type": "object",
+  "properties": {
+    "validatorName": {
+      "type": "string",
+      "description": "The class name of the validator.",
+      "format": "PascalCase"
+    },
+    "registeredName": {
+      "type": "string",
+      "description": "The registry id of the validator.",
+      "format": "kebab-case"
+    },
+    "instanceId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ],
+      "description": "A unique identifier for the validator that produced this log within the session."
+    },
+    "propertyPath": {
+      "type": "string",
+      "description": "The JSON path to the property which was validated that produced this log."
+    },
+    "valueBeforeValidation": {
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
+    },
+    "valueAfterValidation": {
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
+    },
+    "validationResult": {
+      "anyOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/pass-result.json"
+        },
+        {
+          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/fail-result.json"
+        }
+      ]
+    },
+    "startTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "endTime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

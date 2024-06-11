@@ -1,0 +1,118 @@
+{
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/outputs.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Outputs",
+  "type": "object",
+  "properties": {
+    "llmResponseInfo": {
+      "$ref": "#/$defs/LLMResponse"
+    },
+    "rawOutput": {
+      "type": "string",
+      "description": "The string content from the LLM response."
+    },
+    "parsedOutput": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
+          }
+        }
+      ]
+    },
+    "validationResponse": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/reask.json"
+        },
+        {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
+          }
+        }
+      ]
+    },
+    "guardedOutput": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
+          }
+        }
+      ]
+    },
+    "reasks": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/reask.json"
+      }
+    },
+    "validatorLogs": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validator-log.json"
+      }
+    },
+    "error": {
+      "type": "string",
+      "description": "The error message from any exception which interrupted the Guard execution process."
+    },
+    "exception": {
+      "description": "The exception which interrupted the Guard execution process.",
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    }
+  },
+  "$defs": {
+    "LLMResponse": {
+      "type": "object",
+      "description": "Information from the LLM response.",
+      "properties": {
+        "promptTokenCount": {
+          "type": "integer"
+        },
+        "responseTokenCount": {
+          "type": "integer"
+        },
+        "output": {
+          "type": "string"
+        },
+        "streamOutput": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

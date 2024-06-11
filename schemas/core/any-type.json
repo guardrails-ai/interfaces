@@ -1,0 +1,54 @@
+{
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AnyType",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/primitives"
+    },
+    {
+      "$ref": "#/$defs/objects"
+    },
+    {
+      "$ref": "#/$defs/arrays"
+    }
+  ],
+  "$defs": {
+    "primitives": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "objects": {
+      "type": "object",
+      "additionalProperties": {}
+    },
+    "arrays": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/primitives"
+          },
+          {
+            "$ref": "#/$defs/objects"
+          }
+        ]
+      }
+    }
+  }
+}

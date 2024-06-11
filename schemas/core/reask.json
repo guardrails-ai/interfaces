@@ -1,0 +1,17 @@
+{
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/reask.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ReAsk",
+  "type": "object",
+  "properties": {
+    "incorrectValue": {
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
+    },
+    "failResults": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/fail-result.json"
+      }
+    }
+  }
+}

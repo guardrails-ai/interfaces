@@ -6,4 +6,3 @@ dist
 build
 resources/hub/ts/src
 resources/hub/ts/dist
-schemas/core

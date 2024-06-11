@@ -1,0 +1,49 @@
+{
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/call.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Call",
+  "type": "object",
+  "properties": {
+    "iterations": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/iteration.json"
+      },
+      "default": []
+    },
+    "inputs": {
+      "$ref": "#/$defs/CallInputs",
+      "default": {}
+    },
+    "exception": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": {}
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "CallInputs": {
+      "title": "CallInputs",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/inputs.json"
+        },
+        {
+          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/args-and-kwargs.json"
+        }
+      ]
+    }
+  }
+}

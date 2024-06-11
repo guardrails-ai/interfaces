@@ -1,0 +1,20 @@
+{
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validation-result.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ValidationResult",
+  "type": "object",
+  "description": "The output from a single Validator.",
+  "properties": {
+    "outcome": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "fail"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": {}
+    }
+  }
+}

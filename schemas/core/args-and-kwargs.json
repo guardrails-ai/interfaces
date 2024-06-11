@@ -1,0 +1,18 @@
+{
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/args-and-kwargs.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ArgsAndKwargs",
+  "type": "object",
+  "properties": {
+    "args": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
+      }
+    },
+    "kwargs": {
+      "type": "object",
+      "additionalProperties": {}
+    }
+  }
+}
