@@ -4,6 +4,10 @@
   "title": "Call",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string",
+      "description": "The unique identifier for this Call.  Can be used as an identifier for a specific execution of a Guard."
+    },
     "iterations": {
       "type": "array",
       "items": {
@@ -45,5 +49,8 @@
         }
       ]
     }
-  }
+  },
+  "required": [
+    "id"
+  ]
 }

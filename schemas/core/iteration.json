@@ -4,6 +4,18 @@
   "title": "Iteration",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string",
+      "description": "The unique identifier for this Call.  Can be used as an identifier for a specific execution of a Guard."
+    },
+    "index": {
+      "type": "integer",
+      "description": "The zero-based index of this iteration within the current Call."
+    },
+    "call_id": {
+      "type": "string",
+      "description": "The unique identifier for the Call that this iteration is a part of."
+    },
     "inputs": {
       "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/inputs.json"
     },
@@ -11,5 +23,9 @@
       "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/outputs.json"
     }
   },
-  "required": []
+  "required": [
+    "id",
+    "index",
+    "call_id"
+  ]
 }
