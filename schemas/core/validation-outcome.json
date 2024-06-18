@@ -5,6 +5,10 @@
   "description": "The output from a Guard execution.",
   "type": "object",
   "properties": {
+    "call_id": {
+      "type": "string",
+      "description": "Foreign key to the most recent Call this resulted from."
+    },
     "rawLlmOutput": {
       "type": "string",
       "description": "The raw, unchanged string content from the LLM call."
@@ -39,5 +43,8 @@
       "type": "string",
       "description": "If the validation process raised a handleable exception, this field will contain the error message."
     }
-  }
+  },
+  "required": [
+    "call_id"
+  ]
 }
