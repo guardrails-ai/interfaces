@@ -21,10 +21,7 @@
           "additionalProperties": {}
         },
         {
-          "type": "array",
-          "items": {
-            "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
-          }
+          "type": "array"
         }
       ]
     },
@@ -41,10 +38,7 @@
           "additionalProperties": {}
         },
         {
-          "type": "array",
-          "items": {
-            "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
-          }
+          "type": "array"
         }
       ]
     },
@@ -58,10 +52,7 @@
           "additionalProperties": {}
         },
         {
-          "type": "array",
-          "items": {
-            "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
-          }
+          "type": "array"
         }
       ]
     },
@@ -80,16 +71,6 @@
     "error": {
       "type": "string",
       "description": "The error message from any exception which interrupted the Guard execution process."
-    },
-    "exception": {
-      "description": "The exception which interrupted the Guard execution process.",
-      "type": "object",
-      "properties": {
-        "message": {
-          "type": "string"
-        }
-      },
-      "additionalProperties": {}
     }
   },
   "$defs": {
@@ -107,6 +88,12 @@
           "type": "string"
         },
         "streamOutput": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "asyncStreamOutput": {
           "type": "array",
           "items": {
             "type": "string"

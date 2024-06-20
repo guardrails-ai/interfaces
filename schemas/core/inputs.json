@@ -46,6 +46,5 @@
       "type": "boolean",
       "description": "Whether to perform reasks for the entire schema rather than for individual fields."
     }
-
   }
 }

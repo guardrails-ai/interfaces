@@ -27,27 +27,11 @@
       "$ref": "https://json-schema.org/draft/2020-12/schema"
     },
     "history": {
-      "anyOf": [
-        {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "$ref": {
-                "type": "string",
-                "format": "uri"
-              }
-            }
-          }
+        "type": "array",
+        "items": {
+          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/call.json"
         },
-        {
-          "type": "array",
-          "items": {
-            "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/call.json"
-          }
-        }
-      ],
-      "readOnly": true
+        "readOnly": true
     }
   },
   "required": [
@@ -77,6 +61,7 @@
                 "prompt",
                 "instructions",
                 "msg_history",
+                "messages",
                 "output"
               ],
               "description": "meta-property"

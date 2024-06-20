@@ -1,0 +1,23 @@
+{
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/error-span.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ErrorSpan",
+  "type": "object",
+  "properties": {
+    "start": {
+      "type": "integer"
+    },
+    "end": {
+      "type": "integer"
+    },
+    "reason": {
+      "type": "string",
+      "description": "The reason validation failed, specific to this chunk."
+    }
+  },
+  "required": [
+    "start",
+    "end",
+    "reason"
+  ]
+}
