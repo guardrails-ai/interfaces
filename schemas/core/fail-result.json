@@ -1,11 +1,11 @@
 {
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/fail-result.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/fail-result.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "FailResult",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validation-result.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/validation-result.json"
     }
   ],
   "properties": {
@@ -16,12 +16,12 @@
       "type": "string"
     },
     "fixValue": {
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/any-type.json"
     },
     "errorSpans": {
       "type": "array",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/error-span.json"
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/error-span.json"
       
       }
     }

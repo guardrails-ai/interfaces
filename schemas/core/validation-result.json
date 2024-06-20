@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validation-result.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/validation-result.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ValidationResult",
   "type": "object",
@@ -17,7 +17,7 @@
       "additionalProperties": {}
     },
     "validated_chunk": {
-      "type": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
+      "type": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/any-type.json"
     }
   },
   "required": [

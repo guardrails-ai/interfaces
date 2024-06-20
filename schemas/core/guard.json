@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/guard.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/guard.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Guard",
   "type": "object",
@@ -29,7 +29,7 @@
     "history": {
         "type": "array",
         "items": {
-          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/call.json"
+          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/call.json"
         },
         "readOnly": true
     }
@@ -44,7 +44,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/args-and-kwargs.json"
+          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/args-and-kwargs.json"
         }
       ],
       "properties": {

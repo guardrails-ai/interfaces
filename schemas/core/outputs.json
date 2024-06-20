@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/outputs.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/outputs.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Outputs",
   "type": "object",
@@ -31,7 +31,7 @@
           "type": "string"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/reask.json"
+          "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/reask.json"
         },
         {
           "type": "object",
@@ -59,13 +59,13 @@
     "reasks": {
       "type": "array",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/reask.json"
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/reask.json"
       }
     },
     "validatorLogs": {
       "type": "array",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validator-log.json"
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/validator-log.json"
       }
     },
     "error": {
