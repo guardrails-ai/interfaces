@@ -26,7 +26,7 @@
         {
           "type": "array",
           "items": {
-            "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
+            "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/any-type.json"
           }
         }
       ]
