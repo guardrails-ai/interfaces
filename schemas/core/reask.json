@@ -13,5 +13,6 @@
         "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/fail-result.json"
       }
     }
-  }
+  },
+  "additionalProperties": {}
 }
