@@ -45,6 +45,10 @@
     "fullSchemaReask": {
       "type": "boolean",
       "description": "Whether to perform reasks for the entire schema rather than for individual fields."
+    },
+    "stream": {
+      "type": "boolean",
+      "description": "Whether to use streaming."
     }
   }
 }
