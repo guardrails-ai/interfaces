@@ -108,7 +108,10 @@
             "type": "string"
           }
         }
-      }
+      },
+      "required": [
+        "output"
+      ]
     }
   }
 }
