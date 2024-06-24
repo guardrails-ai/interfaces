@@ -5,7 +5,7 @@
   "description": "The output from a Guard execution.",
   "type": "object",
   "properties": {
-    "call_id": {
+    "callId": {
       "type": "string",
       "description": "Foreign key to the most recent Call this resulted from."
     },
@@ -45,6 +45,6 @@
     }
   },
   "required": [
-    "call_id"
+    "callId"
   ]
 }

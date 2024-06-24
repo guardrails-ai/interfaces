@@ -12,7 +12,7 @@
       "type": "integer",
       "description": "The zero-based index of this iteration within the current Call."
     },
-    "call_id": {
+    "callId": {
       "type": "string",
       "description": "The unique identifier for the Call that this iteration is a part of."
     },
@@ -26,6 +26,6 @@
   "required": [
     "id",
     "index",
-    "call_id"
+    "callId"
   ]
 }
