@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/v0.5.0-final-cut/schemas/core/inputs.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/inputs.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Inputs",
   "type": "object",
