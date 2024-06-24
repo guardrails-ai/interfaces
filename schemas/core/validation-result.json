@@ -16,7 +16,7 @@
       "type": "object",
       "additionalProperties": {}
     },
-    "validated_chunk": {
+    "validatedChunk": {
       "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
     }
   },
