@@ -20,20 +20,7 @@
       "default": {}
     },
     "exception": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "message": {
-              "type": "string"
-            }
-          },
-          "additionalProperties": {}
-        }
-      ]
+      "type": "string"
     }
   },
   "$defs": {

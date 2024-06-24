@@ -53,5 +53,11 @@
       "type": "string",
       "format": "date-time"
     }
-  }
+  },
+  "required": [
+    "validatorName",
+    "registeredName",
+    "valueBeforeValidation",
+    "propertyPath"
+  ]
 }

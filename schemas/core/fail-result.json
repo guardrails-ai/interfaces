@@ -17,6 +17,17 @@
     },
     "fixValue": {
       "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
+    },
+    "errorSpans": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/error-span.json"
+      
+      }
     }
-  }
+  },
+  "required": [
+    "outcome",
+    "errorMessage"
+  ]
 }

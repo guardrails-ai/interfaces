@@ -15,6 +15,12 @@
     "metadata": {
       "type": "object",
       "additionalProperties": {}
+    },
+    "validated_chunk": {
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
     }
-  }
+  },
+  "required": [
+    "outcome"
+  ]
 }
