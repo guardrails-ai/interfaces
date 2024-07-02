@@ -96,6 +96,9 @@
         "output": {
           "type": "string"
         },
+        "fullRawLlmOutput": {
+          "type": "any"
+        },
         "streamOutput": {
           "type": "array",
           "items": {
