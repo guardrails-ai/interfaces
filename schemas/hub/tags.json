@@ -52,7 +52,7 @@
         ]
       }
     },
-    "hasGuardRailsEndpoint":{
+    "hasGuardrailsEndpoint":{
       "type": "boolean",
       "description": "Indicates whether validator has a Guardrails endpoint",
       "default": false
