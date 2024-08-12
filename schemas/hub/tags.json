@@ -52,6 +52,9 @@
         ]
       }
     },
+    "hasGuardRailsEndpoint":{
+      "type": "boolean"
+    },
     "riskCategory": {
       "type": "array",
       "items": {
