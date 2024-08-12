@@ -52,6 +52,11 @@
         ]
       }
     },
+    "hasGuardRailsEndpoint":{
+      "type": "boolean",
+      "description": "Indicates whether validator has a Guardrails endpoint",
+      "default": false
+    },
     "riskCategory": {
       "type": "array",
       "items": {
