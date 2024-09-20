@@ -13,6 +13,12 @@
       "type": "string",
       "description": "The raw, unchanged string content from the LLM call."
     },
+    "validationSummaries": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validation-summary.json"
+      }
+    },
     "validatedOutput": {
       "description": "The validated, and potentially fixed, output from the LLM call after undergoing validation.",
       "anyOf": [
