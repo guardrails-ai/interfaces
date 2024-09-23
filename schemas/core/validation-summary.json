@@ -1,0 +1,34 @@
+{
+    "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validator-summary.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "ValidationSummary",
+    "type": "object",
+    "properties": {
+      "validatorName": {
+        "type": "string",
+        "description": "The class name of the validator.",
+        "format": "PascalCase"
+      },
+      "validatorStatus": {
+        "type": "string",
+        "enum": [
+            "pass",
+            "fail"
+        ]
+      },
+      "failureReason": {
+        "type": "string",
+        "description": "The error message indicating why validation failed."
+      },
+      "errorSpans": {
+        "type": "array",
+        "items": {
+            "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/error-span.json"
+        }
+      }
+    },
+    "required": [
+      "validatorName",
+      "validatorStatus"
+    ]
+  }
