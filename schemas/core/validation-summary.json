@@ -16,6 +16,10 @@
             "fail"
         ]
       },
+      "propertyPath": {
+        "type": "string",
+        "description": "The JSON path to the property which was validated that produced this log."
+      },
       "failureReason": {
         "type": "string",
         "description": "The error message indicating why validation failed."
