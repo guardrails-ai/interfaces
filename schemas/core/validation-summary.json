@@ -1,5 +1,5 @@
 {
-    "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validator-summary.json",
+    "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validation-summary.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "ValidationSummary",
     "type": "object",
@@ -15,6 +15,10 @@
             "pass",
             "fail"
         ]
+      },
+      "propertyPath": {
+        "type": "string",
+        "description": "The JSON path to the property which was validated that produced this log."
       },
       "failureReason": {
         "type": "string",
