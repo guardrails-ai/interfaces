@@ -58,9 +58,6 @@
             {
               "type": "string",
               "enum": [
-                "prompt",
-                "instructions",
-                "msg_history",
                 "messages",
                 "output"
               ],
