@@ -12,6 +12,22 @@
       "type": "string",
       "description": "The string output from an external LLM call provided by the user via Guard.parse."
     },
+    "instructions": {
+      "type": "string",
+      "description": "The instructions for chat models."
+    },
+    "prompt": {
+      "type": "string",
+      "description": "The prompt for the LLM."
+    },
+    "msgHistory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": {}
+      },
+      "description": "The message history for chat models."
+    },
     "messages": {
       "type": "array",
       "items": {
