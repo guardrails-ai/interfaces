@@ -28,6 +28,14 @@
       },
       "description": "The message history for chat models."
     },
+    "messages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": {}
+      },
+      "description": "The messages for chat models."
+    },
     "promptParams": {
       "type": "object",
       "additionalProperties": {},
