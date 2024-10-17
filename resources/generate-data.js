@@ -30,7 +30,7 @@ addMediaTypePlugin('text/plain', {
 
 async function generateData () {
 
-  const manifestSchema = await bundleJsonSchema("https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/hub/manifest.json");
+  const manifestSchema = await bundleJsonSchema("https://raw.githubusercontent.com/guardrails-ai/interfaces/litellm_updates/schemas/hub/manifest.json");
   fs.mkdirSync('./build', { recursive: true });
   fs.writeFileSync(resolve('./build/Manifest.json'), JSON.stringify(manifestSchema, null, 2))
 

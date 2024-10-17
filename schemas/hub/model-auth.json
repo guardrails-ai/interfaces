@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/hub/model-auth.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/litellm_updates/schemas/hub/model-auth.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ModelAuth",
   "type": "object",
