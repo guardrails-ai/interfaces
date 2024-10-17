@@ -53,14 +53,11 @@
           "description": "The unique identifier for this Validator.  Often the hub id; e.g. guardrails/regex_match"
         },
         "on": {
-          "description": "A reference to the property this validator should be applied against.  Can be a valid JSON path or a meta-property such as \"prompt\" or \"output\"",
+          "description": "A reference to the property this validator should be applied against.  Can be a valid JSON path or a meta-property such as \"messages\" or \"output\"",
           "anyOf": [
             {
               "type": "string",
               "enum": [
-                "prompt",
-                "instructions",
-                "msg_history",
                 "messages",
                 "output"
               ],
