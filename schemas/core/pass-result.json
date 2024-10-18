@@ -1,11 +1,11 @@
 {
-  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/litellm_updates/schemas/core/pass-result.json",
+  "$id": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/pass-result.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "PassResult",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/litellm_updates/schemas/core/validation-result.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/validation-result.json"
     }
   ],
   "properties": {
@@ -13,7 +13,7 @@
       "const": "pass"
     },
     "valueOverride": {
-      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/litellm_updates/schemas/core/any-type.json"
+      "$ref": "https://raw.githubusercontent.com/guardrails-ai/interfaces/main/schemas/core/any-type.json"
     }
   },
   "required": [
