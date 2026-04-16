@@ -4,7 +4,7 @@
     "@faker-js/faker": "^8.4.1",
     "@hyperjump/browser": "^1.1.4",
     "@hyperjump/json-schema": "^1.9.2",
-    "@openapitools/openapi-generator-cli": "^2.13.4",
+    "@openapitools/openapi-generator-cli": "^2.31.1",
     "json-schema-faker": "^0.5.6",
     "json-schema-to-typescript": "^14.0.0",
     "lodash": "^4.17.21",
